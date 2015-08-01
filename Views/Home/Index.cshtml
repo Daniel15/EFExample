@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Daniel15.EFTest.Post>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Posts</h1>
+    <ul>
+        @foreach (var post in Model)
+        {
+            <li>
+                @post.Title
+            </li>
+        }
+    </ul>
+</body>
+</html>

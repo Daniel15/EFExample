@@ -24,6 +24,7 @@ namespace Daniel15.EFTest
 		{
 			services.AddMvc();
 			services.AddSingleton<IConfiguration>(_ => Configuration);
+			services.AddScoped<MyContext>();
 		}
 
 		public void Configure(IApplicationBuilder app)

@@ -1,12 +1,14 @@
-﻿{
+{
   "webroot": "wwwroot",
   "version": "1.0.0-*",
 
   "dependencies": {
+    "EntityFramework": "6.1.3",
     "Microsoft.AspNet.Mvc": "6.0.0-beta6",
     "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
     "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
-    "Microsoft.Framework.Configuration.Json": "1.0.0-beta6"
+    "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
+    "MySql.Data.Entity": "6.9.7"
   },
 
   "commands": {
@@ -14,8 +16,12 @@
   },
 
   "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Data": "4.0.0.0",
+        "System.configuration": "4.0.0.0"
+      }
+    }
   },
 
   "publishExclude": [
