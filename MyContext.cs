@@ -1,11 +1,11 @@
-﻿using Microsoft.Framework.Configuration;
+using Microsoft.Framework.Configuration;
 using System.Data.Entity;
 
 namespace Daniel15.EFTest
 {
 	[DbConfigurationType(typeof(MyDbConfiguration))]
-    public class MyContext : DbContext
-    {
+	public class MyContext : DbContext
+	{
 		public MyContext(IConfiguration config)
 			: base(config.Get("Data:DefaultConnection:ConnectionString"))
 		{
